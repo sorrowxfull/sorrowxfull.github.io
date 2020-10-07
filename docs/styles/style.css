@@ -2,7 +2,7 @@ body {
   font-family: monospace;
   font-size: 12pt;
   color: #d2d4de;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) repeat,
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) repeat,
     url("../images/aurora.jpg") no-repeat center fixed;
   background-color: #161821;
   -webkit-background-size: cover;
@@ -31,13 +31,14 @@ a {
 #clock {
   text-align: center;
   font-size: 24pt;
-  color: #b4be82;
+  color: #85afea;
+  text-shadow: 1px 1px #000066;
 }
 
 #log_time {
   padding-left: 5px;
   text-align: center;
-  color: #e27878;
+  color: #f15b5b;
 }
 
 .search-bar {
@@ -115,14 +116,14 @@ a {
   text-align: center;
   margin-bottom: 5px;
   color: #161821;
-  background-color: #91acd1;
+  background-color: #9ec2f5;
 }
 
 .bookmark {
   font-size: 11pt;
   margin-bottom: 2px;
   text-align: center;
-  color: #95c4ce;
+  color: #74d2e7;
 }
 
 .bookmark a:focus {
