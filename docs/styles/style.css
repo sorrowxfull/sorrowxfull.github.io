@@ -135,4 +135,6 @@ a {
   margin-left: auto;
   margin-right:auto;
   margin-top: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) repeat;
+  border-radius: 5px;
 }
