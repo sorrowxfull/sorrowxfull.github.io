@@ -67,24 +67,28 @@ function get_weather(d,s,id){
 }
 
 //list of Wallpaper
-var imgAr = ["wp1.jpg", "wp2.jpg", "wp3.jpg", "wp4.jpg", "wp5.jpg", "wp6.jpg", "wp7.jpg", "wp8.jpg", "wp9.jpg",];
-function getImage(n) {
+var imgAr = [];
+for (let i = 1; i < 20; i++) {
+    imgAr[i] = "wp" + i + ".jpg";
+}
+
+function getImage() {
+    //set random wallpaper 
+    var n = Math.floor((Math.random() * ( imgAr.length - 1 )) + 1);
+    alert(n);
     var path = 'images/'; // default path here
-    var num = n;
-    var img = imgAr[ num ];
+    var img = imgAr[ n ];
     var imgStr = path + img;
     return imgStr;
 }
 
 window.onload = function() {
-  //set random wallpaper 
-  var n = Math.floor( Math.random() * imgAr.length );
-  document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) repeat, #161821 url('" + getImage(n) + "') no-repeat";
-  document.body.style.backgroundSize  = "cover";
-  //update clock
-  document.getElementById("log_time").innerText = get_time_log();
-  update_clock();
-  //update weather
-  get_weather(document,'script','weatherwidget-io-js');
-  setInterval(update_clock, 60000);
+    document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) repeat, #161821 url('" + getImage() + "') no-repeat";
+    document.body.style.backgroundSize  = "cover";
+    //update clock
+    document.getElementById("log_time").innerText = get_time_log();
+    update_clock();
+    //update weather
+    get_weather(document,'script','weatherwidget-io-js');
+    setInterval(update_clock, 60000);
 };
