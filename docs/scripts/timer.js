@@ -75,7 +75,6 @@ for (let i = 1; i < 20; i++) {
 function getImage() {
     //set random wallpaper 
     var n = Math.floor((Math.random() * ( imgAr.length - 1 )) + 1);
-    alert(n);
     var path = 'images/'; // default path here
     var img = imgAr[ n ];
     var imgStr = path + img;
