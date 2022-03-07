@@ -44,7 +44,7 @@ function welcome() {
   if (hour <= 12) {
     var phrase = "Good Morning";
   } else if (hour > 12 && hour <= 18) {
-    var phrase = "Good Aftermoon";
+    var phrase = "Good Afternoon";
   } else {
     var phrase = "Good Evening";
   }
